@@ -13,3 +13,6 @@ void Menu::printMenu()
     std::cout << "4.Dzielnie \n" << std::endl;
     std::cout << "5.Zamiana z dec,hex,octal,bin na dec,hex,octal,bin \n" << std::endl;
 }
+//void Menu::printResult(Number result, char operator) {
+//    std::cout << "Re \n" << std::endl;
+//}

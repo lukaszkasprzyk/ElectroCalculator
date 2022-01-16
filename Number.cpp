@@ -3,34 +3,24 @@
 #include <string>
 
 void Number::printValue() {
-	std::cout << "Value: " << Number::value << " Base: " << Number::base << " converted: " << asString() << std::endl;
+    std::cout << "Value in dec: " << Number::value << std::endl;
 }
 
-int Number::getValue() {
+long long int Number::getValue() {
 	return value;
 }
-std::string Number::asString() {
-    if (Number::base == 2) {
-        return toBinary();
-    }
-    else if (Number::base == 8) {
-        return toOctal();
-    }
-    else if (Number::base == 16) {
-        return toHexaDecimal();
-    }
+std::string Number::asDecimal() {
 	return std::to_string(value);
 }
 
 std::string Number::toHexaDecimal() {
-    //Dummy representation//TODO
     return "16x" + Number::value;
 }
 
 std::string Number::toOctal() {
     std::cout << "Value octal" << std::endl;
     std::string result;
-    int tempValue = Number::getValue();
+    auto tempValue = Number::getValue();
     int remainder;
     int i = 0;
     while (tempValue != 0) {
@@ -43,7 +33,6 @@ std::string Number::toOctal() {
 }
 std::string Number::toBinary()
 {
-    
     int tempValue = Number::getValue();
     std::string r;
     while (tempValue != 0){

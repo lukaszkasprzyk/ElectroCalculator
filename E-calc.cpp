@@ -10,6 +10,7 @@ int main()
 {
 	Menu x = Menu();
 	x.printMenu();
+
 	Reader reader = Reader();
 	Number a = reader.readNumber();
 	a.printValue();
@@ -17,9 +18,23 @@ int main()
 	b.printValue();
 
 	Calculator calc = Calculator();
+
 	Number sum = calc.add(a, b);
-	std::cout << "Result" << std::endl;
+	std::cout << "+Result" << std::endl;
 	sum.printValue();
+
+	Number diff = calc.mns(a, b);
+	std::cout << "-Result" << std::endl;
+	diff.printValue();
+
+	Number il = calc.mltp(a, b);
+	std::cout << "*Result" << std::endl;
+	il.printValue();
+
+	Number div = calc.divide(a, b);
+	std::cout << ":Result" << std::endl;
+	div.printValue();
+	
 	return 0;
 }
 

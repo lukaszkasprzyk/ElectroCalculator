@@ -1,29 +1,25 @@
 #pragma once
 #include <string>
-
+#include <iostream>
 class Number
 {
 private:
-	int value = 0;//value in decimal representation - always
-	int base = 10;
-
-	std::string toBinary();
-	std::string toOctal();
-	std::string toHexaDecimal();
-	Number octalToDecimal();
-
+	long long int value = 0;//value in decimal representation - always
+	//float valueF;
 public:
 	// parameterized constructor to initialize variables
-	Number(int input) {
-		value = (input,10);
-	}
-	Number(int input, int baseValue) {
+	Number(long long int input) {
 		value = input;
-		base = baseValue;
 	}
+	/*Number(float input) {
+		valueF = input;
+	}*/
+
 	void printValue();
+	long long int getValue(); //10 based but that's int
 
-	int getValue(); 
-
-	std::string asString();
+	std::string asDecimal();//10 based but that's int
+	std::string toBinary();//can be used only to present value
+	std::string toOctal();//can be used only to present value
+	std::string toHexaDecimal();//can be used only to present value
 };

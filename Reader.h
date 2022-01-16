@@ -3,9 +3,9 @@
 class Reader
 {
 private:
-	int octalToDecimal();
-	int binaryToDecimal();
-	int hexToDecimal();
+	long long int octalToDecimal(std::string input);
+	long long int binaryToDecimal(std::string input);
+	long long int hexToDecimal(std::string input);
 public:
 	Number readNumber();
 };
