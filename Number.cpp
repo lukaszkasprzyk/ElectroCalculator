@@ -54,7 +54,3 @@ std::string Number::toBinary()
 }
 
 
-Number Number::octalToDecimal()
-{
-    return Number(1, 2);
-}

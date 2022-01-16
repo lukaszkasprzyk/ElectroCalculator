@@ -18,6 +18,7 @@ int main()
 
 	Calculator calc = Calculator();
 	Number sum = calc.add(a, b);
+	std::cout << "Result" << std::endl;
 	sum.printValue();
 	return 0;
 }

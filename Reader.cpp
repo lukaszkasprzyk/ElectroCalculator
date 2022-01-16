@@ -8,7 +8,8 @@ Number Reader::readNumber()
     std::cin >> value;
     std::cout << "Podaj podstawe\n";
     std::cin >> base;
-   
+    //TODO value should be converted to decimal cause int does not match to i.e hexdec = AB123
     Number x(value, base);
+
     return x;
 }
